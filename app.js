@@ -21,7 +21,7 @@ const pool = new Pool({
 });
 
 app.get('/', async (req, res) => {
-    const result = await pool.query('SELECT * FROM books');
+    const result = await pool.query('SELECT * FROM books ORDER BY book_id ASC');
     const books = result.rows;
     res.render('index.ejs', { books });
   });
