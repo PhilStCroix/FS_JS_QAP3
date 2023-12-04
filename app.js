@@ -20,6 +20,12 @@ const pool = new Pool({
   port: 5432,
 });
 
+// Importing the API routes
+const apiRoutes = require('./src/api');
+
+// Using the API routes
+app.use('/src/api', apiRoutes);
+
 app.get('/', async (req, res) => {
     const result = await pool.query('SELECT * FROM books ORDER BY book_id ASC');
     const books = result.rows;
