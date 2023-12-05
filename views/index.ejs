@@ -1,9 +1,11 @@
+<!-- index.ejs -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Book List</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">  
 </head>
 <body>
   <h1>Book List</h1>
@@ -13,11 +15,25 @@
         <%= book.title %>
         <a href="/books/<%= book.book_id %>">Details</a>
         <a href="/books/<%= book.book_id %>/edit">Edit</a>
-        <form action="/books/<%= book.book_id %>?_method=DELETE" method="post" style="display:inline;">
-          <button type="submit">Delete</button>
+        
+        <!-- Modify the onclick attribute to show a confirmation dialog and submit the form -->
+        <form id="deleteForm_<%= book.book_id %>" action="/books/<%= book.book_id %>?_method=DELETE" method="post" style="display:inline;">
+          <button type="button" onclick="confirmDelete('<%= book.title %>', '<%= book.book_id %>')" style="text-decoration: none; padding: 8px 12px; background-color: #007bff; color: #fff; border-radius: 5px; text-align: center;
+            display: inline-block;">Delete</button>
         </form>
       </li>
     <% }) %>
   </ul>
+
+  <script>
+    // Function to show a confirmation dialog before submitting the form
+    function confirmDelete(bookTitle, bookId) {
+      if (confirm(`Are you sure you want to delete "${bookTitle}"?`)) {
+        // If the user confirms, submit the form programmatically
+        document.getElementById(`deleteForm_${bookId}`).submit();
+      }
+    }
+  </script>
 </body>
 </html>
+
