@@ -8,12 +8,14 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Middleware
+app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 app.use(methodOverride('_method'));
 app.use('/api', apiRouter);
 
 app.get('/', async (req, res) => {
+  console.log('Fetching all books');
   try {
     const books = await dal.getAllBooks();
     res.render('index.ejs', { books });
@@ -25,6 +27,7 @@ app.get('/', async (req, res) => {
 });
 
 app.get('/books/add', async (req, res) => {
+  console.log('Fetching all books2');
   try {
     const authors = await getAllAuthors();
     const genres = await getAllGenres();
@@ -36,6 +39,7 @@ app.get('/books/add', async (req, res) => {
 });
 
 app.post('/books', async (req, res) => {
+  console.log('Fetching all books3');
   const { title, author_id, genre_id, publication_year, isbn } = req.body;
   try {
     await dal.createBook(title, author_id, genre_id, publication_year, isbn);
@@ -48,6 +52,7 @@ app.post('/books', async (req, res) => {
 });
   
 app.get('/books/:id', async (req, res) => {
+  console.log('Fetching all books4');
   const bookId = req.params.id;
   try {
     console.log('Fetching book details for ID:', bookId);
@@ -66,6 +71,7 @@ app.get('/books/:id', async (req, res) => {
 });
 
 app.get('/books/:id/edit', async (req, res) => {
+  console.log('Fetching all books5');
   const bookId = req.params.id;
   try {
     console.log('Fetching book for editing with ID:', bookId);
@@ -84,18 +90,7 @@ app.get('/books/:id/edit', async (req, res) => {
 });
 
 app.post('/books', async (req, res) => {
-  const { title, author_id, genre_id, publication_year, isbn } = req.body;
-  try {
-    await dal.createBook(title, author_id, genre_id, publication_year, isbn);
-    res.redirect('/');
-  } catch (error) {
-    // Handle error gracefully
-    console.error('Error creating book:', error);
-    res.status(500).send('Internal Server Error');
-  }
-});
-
-app.post('/books', async (req, res) => {
+  console.log('Fetching all books6');
   const { title, author_id, genre_id, publication_year, isbn } = req.body;
   try {
     await dal.createBook(title, author_id, genre_id, publication_year, isbn);
@@ -108,6 +103,7 @@ app.post('/books', async (req, res) => {
 });
 
 app.put('/books/:id', async (req, res) => {
+  console.log('Fetching all books7');
   const bookId = req.params.id;
   const { title, author_id, genre_id, publication_year, isbn } = req.body;
   try {
@@ -121,6 +117,7 @@ app.put('/books/:id', async (req, res) => {
 });
 
 app.patch('/books/:id', async (req, res) => {
+  console.log('Fetching all books8');
   const bookId = req.params.id;
   const { title, author_id, genre_id, publication_year, isbn } = req.body;
   try {
@@ -134,6 +131,7 @@ app.patch('/books/:id', async (req, res) => {
 });
 
 app.delete('/books/:id', async (req, res) => {
+  console.log('Fetching all books9');
   const bookId = req.params.id;
   try {
     await dal.deleteBook(bookId);

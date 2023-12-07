@@ -63,6 +63,17 @@ async function getAllGenres() {
   return result.rows;
 }
 
+async function authorExists(authorId) {
+  const result = await pool.query('SELECT * FROM authors WHERE author_id = $1', [authorId]);
+  return result.rows.length > 0;
+}
+
+async function genreExists(genreId) {
+  const result = await pool.query('SELECT * FROM genres WHERE genre_id = $1', [genreId]);
+  return result.rows.length > 0;
+}
+
+
 async function deleteBook(bookId) {
   await pool.query('DELETE FROM books WHERE book_id = $1', [bookId]);
 }
@@ -76,4 +87,6 @@ module.exports = {
   deleteBook,
   getAllAuthors,
   getAllGenres,
+  authorExists,
+  genreExists,
 };
