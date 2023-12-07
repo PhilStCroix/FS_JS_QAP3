@@ -9,6 +9,8 @@ const PORT = process.env.PORT || 3000;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 app.use(methodOverride('_method'));
+const { getAllAuthors, getAllGenres } = require('./src/dal');
+
 
 
 app.get('/', async (req, res) => {
@@ -24,8 +26,26 @@ app.get('/', async (req, res) => {
 
 
 
-app.get('/books/add', (req, res) => {
-  res.render('add.ejs', { book: {} });
+app.get('/books/add', async (req, res) => {
+  try {
+    const authors = await getAllAuthors();
+    const genres = await getAllGenres();
+    res.render('add.ejs', { authors, genres });
+  } catch (error) {
+    console.error('Error fetching authors and genres:', error);
+    res.status(500).send('Internal Server Error');
+  }
+});
+app.post('/books', async (req, res) => {
+  const { title, author_id, genre_id, publication_year, isbn } = req.body;
+  try {
+    await dal.createBook(title, author_id, genre_id, publication_year, isbn);
+    res.redirect('/');
+  } catch (error) {
+    // Handle error gracefully
+    console.error('Error creating book:', error);
+    res.status(500).send('Internal Server Error');
+  }
 });
   
   app.get('/books/:id', async (req, res) => {

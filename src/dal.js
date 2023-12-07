@@ -41,6 +41,16 @@ async function partiallyUpdateBook(bookId, title, author_id, genre_id, publicati
   );
 }
 
+async function getAllAuthors() {
+  const result = await pool.query('SELECT * FROM authors ORDER BY author_id ASC');
+  return result.rows;
+}
+
+async function getAllGenres() {
+  const result = await pool.query('SELECT * FROM genres ORDER BY genre_id ASC');
+  return result.rows;
+}
+
 async function deleteBook(bookId) {
   await pool.query('DELETE FROM books WHERE book_id = $1', [bookId]);
 }
@@ -52,4 +62,6 @@ module.exports = {
   updateBook,
   partiallyUpdateBook,
   deleteBook,
+  getAllAuthors,
+  getAllGenres,
 };
