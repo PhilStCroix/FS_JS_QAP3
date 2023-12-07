@@ -21,6 +21,12 @@ app.get('/', async (req, res) => {
     res.status(500).send('Internal Server Error');
   }
 });
+
+
+
+app.get('/books/add', (req, res) => {
+  res.render('add.ejs', { book: {} });
+});
   
   app.get('/books/:id', async (req, res) => {
     const bookId = req.params.id;
@@ -55,10 +61,6 @@ app.get('/', async (req, res) => {
     }
   });
 
-  app.get('books/add', (req, res) => {
-    res.render('add.ejs');
-  });
-
   app.post('/books', async (req, res) => {
     const { title, author_id, genre_id, publication_year, isbn } = req.body;
     try {
@@ -70,6 +72,18 @@ app.get('/', async (req, res) => {
       res.status(500).send('Internal Server Error');
     }
   });
+
+  // app.post('/books', async (req, res) => {
+  //   const { title, author_id, genre_id, publication_year, isbn } = req.body;
+  //   try {
+  //     await dal.createBook(title, author_id, genre_id, publication_year, isbn);
+  //     res.redirect('/');
+  //   } catch (error) {
+  //     // Handle error gracefully
+  //     console.error('Error creating book:', error);
+  //     res.status(500).send('Internal Server Error');
+  //   }
+  // });
   
   app.put('/books/:id', async (req, res) => {
     const bookId = req.params.id;
