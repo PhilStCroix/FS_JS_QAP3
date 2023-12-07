@@ -1,0 +1,7 @@
+{
+    "title": "New Book API Title",
+    "author_id": 1,    
+    "genre_id": 2,     
+    "publication_year": 2023,
+    "isbn": "1234567990"
+  }
