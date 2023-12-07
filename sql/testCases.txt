@@ -1,0 +1,30 @@
+Web Page Listing All Books:
+
+As a book enthusiast, I can visit a web page listing all the books in the database.
+Fetch All Books via REST API:
+
+As a developer, I can make a request to a REST API endpoint to fetch all books from the database, and the records should be returned as JSON data.
+Web Page to Add a New Book:
+
+As a librarian, I can access a web page that allows me to add a new book to the database.
+Add New Book via Web Page:
+
+As a librarian, I can use the web page to add a new book to the database, providing all the required information.
+Add New Book via API:
+
+As a developer or librarian, I can make a request to the API to add a new book to the database, providing the necessary data in the request payload.
+View Book Details:
+
+As a reader, I can click on a book from the web page listing and view detailed information about that book.
+Edit Book Details via Web Page:
+
+As a librarian, I can access a web page to edit the details of a book in the database.
+Edit Book Details via API:
+
+As a developer or librarian, I can make a request to the API to edit the details of a book in the database, providing the updated information.
+Delete Book via Web Page:
+
+As a librarian, I can use the web page to delete a book from the database.
+Delete Book via API:
+
+As a developer or librarian, I can make a request to the API to delete a book from the database.
