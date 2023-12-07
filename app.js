@@ -55,6 +55,10 @@ app.get('/', async (req, res) => {
     }
   });
 
+  app.get('books/add', (req, res) => {
+    res.render('add.ejs');
+  });
+
   app.post('/books', async (req, res) => {
     const { title, author_id, genre_id, publication_year, isbn } = req.body;
     try {
