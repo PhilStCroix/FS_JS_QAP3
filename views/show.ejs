@@ -5,16 +5,37 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Book Details</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 50vh;
+      margin: 0;
+    }
+    .details-container {
+      max-width: 600px;
+      width: 100%;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      background-color: #fff;
+    }
+  </style>
 </head>
 <body>
-  <h1>Book Details</h1>
-  <p>Title: <%= book.title %></p>
-  <p>Author ID: <%= book.author_id %></p>
-  <p>Genre ID: <%= book.genre_id %></p>
-  <p>Publication Year: <%= book.publication_year %></p>
-  <p>ISBN: <%= book.isbn %></p>
+  <div class="details-container">
+    <h1>Book Details</h1>
+    <p><strong>Title:</strong> <%= book.title %></p>
+    <p><strong>Author ID:</strong> <%= book.author_id %></p>
+    <p><strong>Genre ID:</strong> <%= book.genre_id %></p>
+    <p><strong>Publication Year:</strong> <%= book.publication_year %></p>
+    <p><strong>ISBN:</strong> <%= book.isbn %></p>
+    <!-- Add more details as needed -->
 
-  <!-- Button to return to the root page -->
-  <a href="/" style="text-decoration: none; padding: 8px 12px; background-color: #007bff; color: #fff; border-radius: 5px;">Return to Book List</a>
+    <!-- Link to go back to the book list -->
+    <a href="/" style="text-decoration: none; padding: 8px 12px; background-color: #007bff; color: #fff; border-radius: 5px; display: inline-block; margin-top: 10px;">Back to Book List</a>
+  </div>
 </body>
 </html>
