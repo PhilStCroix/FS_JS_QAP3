@@ -24,8 +24,6 @@ app.get('/', async (req, res) => {
   }
 });
 
-
-
 app.get('/books/add', async (req, res) => {
   try {
     const authors = await getAllAuthors();
@@ -36,6 +34,7 @@ app.get('/books/add', async (req, res) => {
     res.status(500).send('Internal Server Error');
   }
 });
+
 app.post('/books', async (req, res) => {
   const { title, author_id, genre_id, publication_year, isbn } = req.body;
   try {
@@ -48,100 +47,103 @@ app.post('/books', async (req, res) => {
   }
 });
   
-  app.get('/books/:id', async (req, res) => {
-    const bookId = req.params.id;
-    try {
-      const book = await dal.getBookById(bookId);
-      if (!book) {
-        res.status(404).send('Book not found');
-        return;
-      }
-      res.render('show.ejs', { book });
-    } catch (error) {
-      // Handle error gracefully
-      console.error('Error fetching book details:', error);
-      res.status(500).send('Internal Server Error');
+app.get('/books/:id', async (req, res) => {
+  const bookId = req.params.id;
+  try {
+    console.log('Fetching book details for ID:', bookId);
+    const book = await dal.getBookById(bookId);
+    console.log('Retrieved book:', book);
+    if (!book) {
+      console.log('Book not found');
+      res.status(404).send('Book not found');
+      return;
     }
-  });
-  
+    res.render('show.ejs', { book });
+  } catch (error) {
+    console.error('Error fetching book details:', error);
+    res.status(500).send('Internal Server Error');
+  }
+});
 
-  app.get('/books/:id/edit', async (req, res) => {
-    const bookId = req.params.id;
-    try {
-      const book = await dal.getBookById(bookId);
-      if (!book) {
-        res.status(404).send('Book not found');
-        return;
-      }
-      res.render('edit.ejs', { book });
-    } catch (error) {
-      // Handle error gracefully
-      console.error('Error fetching book for editing:', error);
-      res.status(500).send('Internal Server Error');
+app.get('/books/:id/edit', async (req, res) => {
+  const bookId = req.params.id;
+  try {
+    console.log('Fetching book for editing with ID:', bookId);
+    const book = await dal.getBookById(bookId);
+    console.log('Retrieved book for editing:', book);
+    if (!book) {
+      console.log('Book not found for editing');
+      res.status(404).send('Book not found');
+      return;
     }
-  });
+    res.render('edit.ejs', { book });
+  } catch (error) {
+    console.error('Error fetching book for editing:', error);
+    res.status(500).send('Internal Server Error');
+  }
+});
 
-  app.post('/books', async (req, res) => {
-    const { title, author_id, genre_id, publication_year, isbn } = req.body;
-    try {
-      await dal.createBook(title, author_id, genre_id, publication_year, isbn);
-      res.redirect('/');
-    } catch (error) {
-      // Handle error gracefully
-      console.error('Error creating book:', error);
-      res.status(500).send('Internal Server Error');
-    }
-  });
+app.post('/books', async (req, res) => {
+  const { title, author_id, genre_id, publication_year, isbn } = req.body;
+  try {
+    await dal.createBook(title, author_id, genre_id, publication_year, isbn);
+    res.redirect('/');
+  } catch (error) {
+    // Handle error gracefully
+    console.error('Error creating book:', error);
+    res.status(500).send('Internal Server Error');
+  }
+});
 
-  // app.post('/books', async (req, res) => {
-  //   const { title, author_id, genre_id, publication_year, isbn } = req.body;
-  //   try {
-  //     await dal.createBook(title, author_id, genre_id, publication_year, isbn);
-  //     res.redirect('/');
-  //   } catch (error) {
-  //     // Handle error gracefully
-  //     console.error('Error creating book:', error);
-  //     res.status(500).send('Internal Server Error');
-  //   }
-  // });
-  
-  app.put('/books/:id', async (req, res) => {
-    const bookId = req.params.id;
-    const { title, author_id, genre_id, publication_year, isbn } = req.body;
-    try {
-      await dal.updateBook(bookId, title, author_id, genre_id, publication_year, isbn);
-      res.redirect('/');
-    } catch (error) {
-      // Handle error gracefully
-      console.error('Error updating book:', error);
-      res.status(500).send('Internal Server Error');
-    }
-  });
-  
-  app.patch('/books/:id', async (req, res) => {
-    const bookId = req.params.id;
-    const { title, author_id, genre_id, publication_year, isbn } = req.body;
-    try {
-      await dal.partiallyUpdateBook(bookId, title, author_id, genre_id, publication_year, isbn);
-      res.redirect('/');
-    } catch (error) {
-      // Handle error gracefully
-      console.error('Error partially updating book:', error);
-      res.status(500).send('Internal Server Error');
-    }
-  });
-  
-  app.delete('/books/:id', async (req, res) => {
-    const bookId = req.params.id;
-    try {
-      await dal.deleteBook(bookId);
-      res.redirect('/');
-    } catch (error) {
-      // Handle error gracefully
-      console.error('Error deleting book:', error);
-      res.status(500).send('Internal Server Error');
-    }
-  });
+app.post('/books', async (req, res) => {
+  const { title, author_id, genre_id, publication_year, isbn } = req.body;
+  try {
+    await dal.createBook(title, author_id, genre_id, publication_year, isbn);
+    res.redirect('/');
+  } catch (error) {
+    // Handle error gracefully
+    console.error('Error creating book:', error);
+    res.status(500).send('Internal Server Error');
+  }
+});
+
+app.put('/books/:id', async (req, res) => {
+  const bookId = req.params.id;
+  const { title, author_id, genre_id, publication_year, isbn } = req.body;
+  try {
+    await dal.updateBook(bookId, title, author_id, genre_id, publication_year, isbn);
+    res.redirect('/');
+  } catch (error) {
+    // Handle error gracefully
+    console.error('Error updating book:', error);
+    res.status(500).send('Internal Server Error');
+  }
+});
+
+app.patch('/books/:id', async (req, res) => {
+  const bookId = req.params.id;
+  const { title, author_id, genre_id, publication_year, isbn } = req.body;
+  try {
+    await dal.partiallyUpdateBook(bookId, title, author_id, genre_id, publication_year, isbn);
+    res.redirect('/');
+  } catch (error) {
+    // Handle error gracefully
+    console.error('Error partially updating book:', error);
+    res.status(500).send('Internal Server Error');
+  }
+});
+
+app.delete('/books/:id', async (req, res) => {
+  const bookId = req.params.id;
+  try {
+    await dal.deleteBook(bookId);
+    res.redirect('/');
+  } catch (error) {
+    // Handle error gracefully
+    console.error('Error deleting book:', error);
+    res.status(500).send('Internal Server Error');
+  }
+});
 // Start server
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);

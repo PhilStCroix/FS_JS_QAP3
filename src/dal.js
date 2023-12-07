@@ -18,7 +18,19 @@ async function getBookById(bookId) {
   const bookIdAsInt = parseInt(bookId, 10);
   if (isNaN(bookIdAsInt)) {
     return null; // or you can throw an error if you prefer
-  }};
+  }
+
+  // Perform a database query to get the book with the specified ID
+  const result = await pool.query('SELECT * FROM books WHERE book_id = $1', [bookIdAsInt]);
+
+  // Check if a book was found
+  if (result.rows.length === 0) {
+    return null; // or you can throw an error if you prefer
+  }
+
+  // Return the retrieved book
+  return result.rows[0];
+}
 
 async function createBook(title, author_id, genre_id, publication_year, isbn) {
   await pool.query(
