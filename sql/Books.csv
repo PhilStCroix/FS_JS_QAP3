@@ -1,0 +1,201 @@
+book_id,title,author_id,genre_id,publication_year,ISBN
+1,Godzilla vs. Hedorah (Gojira tai Hedorâ) (Godzilla vs. The Smog Monster) ,10,6,1989,1264028
+2,Miss Farkku-Suomi,37,8,1976,1962379
+3,Hallåhallå,44,7,1987,1270263
+4,Graceland,8,3,1989,1728821
+5,Sea of Love,45,2,1996,1110191
+6,Enchantment,47,1,2000,1650268
+7,My Life in Orange (Sommer in Orange),37,5,1998,1085978
+8,IMAX: Coral Reef Adventure,19,4,2006,1180970
+9,Wagner's Dream,33,7,1970,1518373
+10,Beefcake,23,3,2012,1394811
+11,"Monitor, The (Babycall)",15,2,1992,1071635
+12,Evita,49,10,1997,1175871
+13,The Merry Widow,24,3,1993,1374487
+14,Buffalo '66 (a.k.a. Buffalo 66),27,8,2008,1722512
+15,Alice in the Cities (Alice in den Stadten),30,5,2005,1863442
+16,"Master of Ballantrae, The",13,4,2011,1653256
+17,"Thank You, Jeeves!",50,2,1985,1673040
+18,Superman/Doomsday ,33,10,1993,1109183
+19,"Violent Men, The",41,9,2001,1107752
+20,"Howards of Virginia, The",22,4,1993,1037268
+21,Road House,24,8,2002,1641474
+22,"Return of the King, The",28,3,2000,1569690
+23,Time Freak,26,10,1994,1795272
+24,"North and South, Book II",42,2,2001,1595490
+25,Haunted Castle,35,8,2003,1303051
+26,Dragon Ball Z: Bio-Broly (Doragon bôru Z 11: Sûpâ senshi gekiha! Katsu no wa ore da),6,4,1993,1387243
+27,Walking Tall Part II,38,2,2000,1363849
+28,"Ivan the Terrible, Part Two (Ivan Groznyy II: Boyarsky zagovor)",5,9,2008,1021656
+29,Ernest & Célestine (Ernest et Célestine),10,5,1985,1871797
+30,Napoléon,4,6,2011,1380956
+31,Rouva presidentti,40,2,2009,1733854
+32,"Long Walk Home, The",43,1,1989,1401599
+33,Anamorph,16,10,1996,1638353
+34,"World Moves On, The",50,6,1999,1920598
+35,"Muppet Christmas Carol, The",24,4,2010,1160818
+36,I Am Trying to Break Your Heart,29,9,2010,1038023
+37,Mala Noche,9,3,1998,1161884
+38,Charlie's Angels: Full Throttle,32,8,2003,1861124
+39,Small Time Crooks,38,7,2012,1031755
+40,"South, The (Sur)",25,5,2009,1467009
+41,Dear Diary (Caro Diario),24,10,1988,1011415
+42,You Are the Apple of My Eye,15,6,2005,1354746
+43,"Crossing Guard, The",17,2,2008,1107269
+44,Goal! III,13,9,1997,1380147
+45,Doctor X,37,4,2002,1178254
+46,Just 4 Kicks,16,10,2004,1359292
+47,Can't Help Singing,36,8,2001,1546208
+48,Bulworth,9,3,2000,1368053
+49,Becoming Jane,22,5,2005,1270973
+50,"General, The",16,7,1991,1961416
+51,Fear and Desire,18,3,1989,1825242
+52,Visitor to a Museum (Posetitel muzeya),31,1,2001,1112871
+53,"Rocket from Calabuch, The (Calabuch)",48,8,1993,1638555
+54,F.I.S.T.,27,9,2006,1802111
+55,Hot Rods to Hell,12,4,2007,1575549
+56,Making Mr. Right,50,7,1993,1243345
+57,Guilty of Romance (Koi no tsumi) ,33,6,1993,1455558
+58,Heckler,6,10,2002,1105864
+59,"Moderns, The",48,2,2008,1029908
+60,I Shot Jesse James,49,1,2008,1290811
+61,Mirrors 2,30,9,2002,1841239
+62,"Perfect Couple, A",14,1,2008,1653339
+63,Harry Potter and the Goblet of Fire,28,5,2013,1403253
+64,Six Days,9,2,1960,1925122
+65,Pépé le Moko,48,8,1989,1739358
+66,"Man in the White Suit, The",15,7,2002,1129974
+67,Man with the Gun,32,8,2009,1761458
+68,On Tour (Tournée),43,6,1994,1937145
+69,Children of the Corn III,20,9,1997,1248190
+70,"Human Centipede, The (First Sequence)",42,10,2005,1873661
+71,Eden Log,13,7,2011,1016376
+72,Citizen Ruth,10,1,1981,1265589
+73,Toni,18,3,1983,1767734
+74,Bastards,32,6,1986,1520661
+75,Wrong Side Up (Pribehy obycejneho silenstvi),37,10,2002,1803704
+76,Meatballs Part II,19,9,2004,1408289
+77,"Messenger, The",20,2,2008,1765398
+78,Back Stage,48,7,1999,1602694
+79,"Man Who Saw Tomorrow, The",46,6,2003,1833522
+80,Devdas,36,8,1991,1373185
+81,Cellular,40,5,2010,1867890
+82,Boy Eating the Bird's Food (To agori troei to fagito tou pouliou),12,1,1998,1235149
+83,Permanent Midnight,17,3,2007,1466400
+84,Wide Awake,29,4,2000,1817160
+85,What's Eating Gilbert Grape,2,6,2004,1879462
+86,Hellsinki (Rööperi),43,9,2009,1019646
+87,Heart of Dragon (Long de xin),50,8,2009,1735788
+88,Mongol,17,7,2006,1767213
+89,Evidence ,44,3,1996,1319553
+90,"Doors, The",40,2,2009,1529534
+91,"Sting, The",37,2,1992,1578563
+92,Trucker,31,10,1999,1671537
+93,F/X,4,1,1993,1990853
+94,Enthusiasm (Entuziazm: Simfoniya Donbassa),50,5,2001,1113590
+95,Dragonfly,29,9,2005,1914395
+96,"Strange Color Of Your Body's Tears, The (L'étrange couleur des larmes de ton corps)",17,6,1993,1515739
+97,"Wings of the Dove, The",45,10,1992,1905624
+98,Cold Fish (Tsumetai nettaigyo),29,2,1999,1197097
+99,"Borrowers, The",38,1,1997,1981877
+100,Blackout,41,8,2006,1705578
+101,"Power of One, The",36,6,2009,1292442
+102,Stone of Destiny,49,3,2005,1900174
+103,Tol'able David,37,5,1984,1861687
+104,"Suburbans, The",45,9,2004,1692378
+105,Gorko!,20,6,1998,1385207
+106,Steel,5,8,1984,1301982
+107,"Elephant Man, The",13,2,2002,1793884
+108,Rock School,19,10,2006,1918272
+109,Payback,8,2,1996,1881792
+110,"Haunted Mansion, The",48,9,1985,1508970
+111,"Edge of Heaven, The (Auf der anderen Seite)",27,5,1972,1873362
+112,"What's Up, Scarlet?",20,3,1998,1734317
+113,California Split,40,7,1997,1623728
+114,"Story of the Weeping Camel, The (Geschichte vom weinenden Kamel, Die)",13,1,2007,1181890
+115,Back Door to Hell,28,2,2008,1171026
+116,Let's Go to Prison,26,6,2011,1350793
+117,"Kings of Summer, The",16,10,2000,1252647
+118,"Price of Forgiveness, The (Ndeysaan)",11,3,2009,1056679
+119,Our Blushing Brides,23,4,2006,1815728
+120,Long Night's Journey Into Day,29,7,2006,1545784
+121,Bernice Bobs Her Hair,21,10,1992,1783175
+122,Cast a Dark Shadow (Angel),41,4,1987,1499995
+123,One Night of Love,22,2,2008,1725336
+124,This Night I'll Possess Your Corpse (Esta Noite Encarnarei no Teu Cadáver),45,9,2001,1506961
+125,Anything for Her (Pour elle),39,8,2007,1166656
+126,Mr. Majestyk,25,3,2010,1260509
+127,"Laramie Project, The",24,3,1997,1396073
+128,"Devil's Carnival, The",1,8,1991,1551424
+129,Breakin' All the Rules,44,7,2006,1598585
+130,Sliver,48,6,2010,1666187
+131,Special Correspondents (Envoyés très spéciaux),27,5,1996,1406707
+132,And Along Come Tourists (Am Ende kommen Touristen),3,10,2007,1712844
+133,Timecop,5,1,2010,1495877
+134,Container,41,7,2008,1984871
+135,You Will Meet a Tall Dark Stranger,7,5,1987,1197629
+136,The Hunting Ground,24,2,2009,1691348
+137,Always Leave Them Laughing,23,6,1993,1552672
+138,Werner - Volles Rooäää,13,4,2011,1058826
+139,"Three Brothers, The (Les trois frères)",20,6,1999,1893047
+140,Hardball,43,1,1997,1028479
+141,When Nietzsche Wept,32,7,1992,1719351
+142,Legend of the Guardians: The Owls of Ga'Hoole,21,8,2007,1314525
+143,Charlie Chan in City in Darkness,49,10,2008,1362167
+144,Bombón: El Perro (El perro),5,4,1987,1730714
+145,Thirst (Pyaasa),25,7,2008,1352540
+146,Rollerball,4,2,2007,1798699
+147,"Vie en Rose, La (Môme, La)",45,5,2010,1956997
+148,Home for Christmas (Hjem til jul),2,4,2006,1157499
+149,"Woman Under the Influence, A",34,10,2009,1258967
+150,Under Siege 2: Dark Territory,22,9,2011,1289641
+151,Stolen Summer,45,4,2012,1105444
+152,"Very Long Engagement, A (Un long dimanche de fiançailles)",38,5,1987,1395282
+153,This Special Friendship (Les amitiés particulières),17,1,1997,1357127
+154,Ernest Saves Christmas,49,9,2004,1781002
+155,Superstar,35,3,1994,1562517
+156,Friendship!,3,8,2005,1582421
+157,Angels of the Universe (Englar alheimsins),3,6,1989,1965607
+158,9 1/2 Weeks (Nine 1/2 Weeks),50,10,1994,1202334
+159,Noah's Ark,18,1,2005,1463494
+160,Teenage Paparazzo,8,5,1994,1731956
+161,Prospero's Books,20,9,1999,1180965
+162,Baby Boom,48,2,1998,1906836
+163,"Return of a Man Called Horse, The",41,6,2010,1909299
+164,Berta's Motives (Los motivos de Berta: Fantasía de Pubertad),45,3,2010,1457262
+165,Brave New World,22,9,1992,1811863
+166,Jean de Florette,3,7,2009,1435424
+167,Confessions from a Holiday Camp,28,2,2011,1945167
+168,"Crying Out Love in the Center of the World (Sekai no chûshin de, ai o sakebu)",23,4,2009,1152579
+169,Mystery on Monster Island,1,1,1991,1289465
+170,Karlsson on the Roof,39,9,2007,1670179
+171,Eight Below,22,7,1968,1395586
+172,10 to Midnight,6,3,2001,1793274
+173,Frozen,45,6,2009,1393931
+174,"Tortured, The",19,4,2004,1525032
+175,Hey Bartender,3,9,2008,1343401
+176,"Forgotten, The",16,1,2009,1799390
+177,"Caiman, The (Il caimano)",10,2,1996,1728183
+178,My Science Project,19,8,1997,1518316
+179,Alps (Alpeis),41,4,1997,1296787
+180,Unbeatable (Ji zhan),37,6,1990,1031122
+181,"Hedgehog, The (Le hérisson)",36,5,2000,1235238
+182,The Pentagon Papers,32,9,1997,1901222
+183,"Expendables 3, The",3,1,1998,1144120
+184,"Same Love, Same Rain (El mismo amor, la misma lluvia)",30,2,2007,1757302
+185,A Summer in St. Tropez,43,4,2010,1901796
+186,"Superweib, Das",39,7,2013,1729331
+187,Lupin III: First Contact (Rupan Sansei: Faasuto Kontakuto),6,10,2000,1687137
+188,My Old Lady,11,4,1994,1596016
+189,"Question of Silence, A (De stilte rond Christine M.)",7,2,2005,1409552
+190,"Mummy's Ghost, The",12,1,2012,1262550
+191,Baby Mama,22,8,1993,1314566
+192,"Wanderers, The",46,6,2000,1947732
+193,Foon,31,7,1994,1742057
+194,How to Be a Serial Killer,49,5,2011,1441365
+195,SS Experiment Love Camp (Lager SSadis Kastrat Kommandantur),25,9,1965,1742571
+196,Uptown Saturday Night,35,3,1984,1989726
+197,Tin Man,42,4,2007,1555890
+198,Steppenwolf,34,1,2009,1497678
+199,"Dance of Reality, The (Danza de la realidad, La)",28,9,1986,1191042
+200,I Heart Monster Movies,20,6,2005,1110440
