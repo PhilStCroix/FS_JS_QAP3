@@ -69,3 +69,10 @@ SELECT * FROM authors WHERE author_id = 17; -- to test
 DELETE FROM books WHERE isbn = '1673040';
 
 SELECT * FROM books WHERE isbn ='1673040'; -- to test
+
+-- resetting counters
+-- Find the maximum current value in the sequence
+SELECT setval('books_book_id_seq', (SELECT MAX(book_id) FROM books));
+
+-- Reset the sequence to the next value
+SELECT setval('books_book_id_seq', (SELECT MAX(book_id) FROM books) + 1);
