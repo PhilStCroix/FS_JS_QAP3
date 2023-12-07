@@ -1,6 +1,8 @@
 const express = require('express');
 const methodOverride = require('method-override');
 const dal = require('./src/dal');
+const apiRouter = require('./src/api');
+const { getAllAuthors, getAllGenres } = require('./src/dal');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -9,9 +11,7 @@ const PORT = process.env.PORT || 3000;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 app.use(methodOverride('_method'));
-const { getAllAuthors, getAllGenres } = require('./src/dal');
-
-
+app.use('/api', apiRouter);
 
 app.get('/', async (req, res) => {
   try {
